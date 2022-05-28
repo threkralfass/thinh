@@ -1,0 +1,52 @@
+<head>
+    <title> Welcom player from Win</title>
+    
+</head>
+<body>
+    <div id="mota">
+        <p>Họ và tên người viết :Nguyễn Lê Đức Thịnh
+
+        </p>
+
+    </div>
+
+    <div>
+        <input type="text" id="ketqua" placeholder="ket qua"/>
+        <br/>
+        <input id="0" type="button" value="0" onclick="handleClick(0)" />        
+        <input id="1" type="button" value="1" onclick="handleClick(1)" />
+        <input id="2" type="button" value="2" onclick="handleClick(2)" />
+        <input id="3" type="button" value="3" onclick="handleClick(3)" />
+        <input id="4" type="button" value="4" onclick="handleClick(4)" />
+        <br/>
+        <input id="5" type="button" value="5" onclick="handleClick(5)" />
+        <input id="6" type="button" value="6" onclick="handleClick(6)" />
+        <input id="7" type="button" value="7" onclick="handleClick(7)" />
+        <input id="8" type="button" value="8" onclick="handleClick(8)" />        
+        
+        <input id="9" type="button" value="9" onclick="handleClick(9)" />
+        <br/>
+        <input id="+" type="button" value="+" onclick="handleClick('+')" />
+        <input id="-" type="button" value="-" onclick="handleClick('-')" />
+        <input id="*" type="button" value="*" onclick="handleClick('*')"/>
+        <input id=":" type="button" value="/" onclick="handleClick(':')"/>
+        <input type="button" value="=" onclick="handleCalc()"/>
+    </div>
+    <style>
+        body {
+           background-image: url("./background.jpg"); 
+            color: white;
+        }
+    </style>
+    <script>
+        function handleCalc() {
+            const exp = document.getElementById('ketqua').value;
+            document.getElementById('ketqua').value = eval(exp);
+        }
+
+        function handleClick(id) {
+            const num = document.getElementById(id).value;
+            document.getElementById('ketqua').value += num;
+        }
+    </script>
+</body>
